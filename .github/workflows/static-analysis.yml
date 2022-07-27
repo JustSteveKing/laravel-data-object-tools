@@ -1,0 +1,36 @@
+name: "Static Analaysis"
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        php: [ 8.1 ]
+        dependency-version: [ prefer-lowest, prefer-stable ]
+
+    name: P${{ matrix.php }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, http
+          coverage: none
+
+      - name: Install dependencies
+        run: composer update --no-interaction --prefer-source --no-suggest
+
+      - name: 'Run PHPStan'
+        uses: php-actions/phpstan@v3
+        with:
+          path: src/

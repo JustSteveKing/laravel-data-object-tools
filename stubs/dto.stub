@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }}
+
+use JustSteveKing\DataObjects\Contracts\DataObjectContract;
+
+final class {{ class }} implements DataObjectContract
+{
+    public function __construct(
+        //
+    ) {}
+
+    public function toArray(): array
+    {
+        return [];
+    }
+}
