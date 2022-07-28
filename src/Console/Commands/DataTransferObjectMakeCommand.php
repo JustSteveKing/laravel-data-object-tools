@@ -12,7 +12,7 @@ final class DataTransferObjectMakeCommand extends GeneratorCommand
     /**
      * @var string
      */
-    protected $name = "make:dto {name : The DTO Name}";
+    protected $signature = "make:dto {name : The DTO Name}";
 
     /**
      * @var string
