@@ -1,5 +1,3 @@
-This file will contain the contents of the auto-generated changelog.
-
 ## Fix stubs - 2022-07-29
 
 ### What's Changed
