@@ -81,6 +81,12 @@ class StoreController
 }
 ```
 
+## Object Hydration
+
+Under the hood this package uses an [EventSauce](https://github.com/EventSaucePHP) package, created by [Frank de Jonge](https://github.com/frankdejonge). It is possibly the
+best package I have found to hydrate objects nicely in PHP. You can find the [documentation here](https://github.com/EventSaucePHP/ObjectHydrator)
+if you would like to see what else you are able to do with the package to suit your needs.
+
 ## Testing
 
 To run the test suite:
