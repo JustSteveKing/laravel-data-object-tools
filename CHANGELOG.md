@@ -1,3 +1,15 @@
+## 2.0.0 - 2024-09-10
+
+### What's Changed
+
+* Support for Laravel 11 by @YOzaz in https://github.com/JustSteveKing/laravel-data-object-tools/pull/6
+
+### New Contributors
+
+* @YOzaz made their first contribution in https://github.com/JustSteveKing/laravel-data-object-tools/pull/6
+
+**Full Changelog**: https://github.com/JustSteveKing/laravel-data-object-tools/compare/1.1.0...2.0.0
+
 ## Laravel 10 Support - 2023-03-27
 
 ### What's Changed
